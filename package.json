@@ -23,7 +23,8 @@
     "sequelize": "^3.23.6",
     "sequelize-cli": "^3.2.0",
     "serve-favicon": "^2.5.0",
-    "sqlite3": "^3.0.8"
+    "sqlite3": "^3.0.8",
+    "swagger-ui-express": "^4.1.2"
   },
   "devDependencies": {
     "cross-env": "^3.1.3",

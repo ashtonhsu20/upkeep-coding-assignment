@@ -1,5 +1,7 @@
 <h3>Overview</h3>
-This app was created with express for routing, sequelize for the ORM, and swagger for the API documentation
+This app was created with express for routing, sequelize for the ORM, and swagger for the API documentation. Swagger is a tool to document and test API routes. You can view and try out my routes by visiting 
+`http://localhost:3000/api-docs`
+
 
 <h3>Requirements</h3>
 MySql >=5.6
@@ -15,4 +17,3 @@ npx sequelize-cli db:seed:all
 npm start
 ```
 
-DROP VIEW `upkeep-project`.friends_view RESTRICT;
