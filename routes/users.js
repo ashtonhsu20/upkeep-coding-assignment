@@ -3,7 +3,6 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('sequelize');
 
-//todo move to services
 router.get("/", function (req, res) {
   let options = {};
   if (req.query.limit) {
@@ -23,8 +22,6 @@ router.get("/", function (req, res) {
 
 
 router.get("/:userId/friends", function (req, res) {
-  console.log(req.param.userId);
-
   models.sequelize.query(
     `
     SELECT users.*
@@ -45,8 +42,6 @@ router.get("/:userId/friends", function (req, res) {
 });
 
 router.get("/:userId/friends_of_friends", function (req, res) {
-  console.log(req.param.userId);
-
   models.sequelize.query(
     `
     SELECT DISTINCT users.*

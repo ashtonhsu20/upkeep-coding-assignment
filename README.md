@@ -17,3 +17,9 @@ npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 npm start
 ```
+
+<h3>Tests are written in Mocha and can be run with</h3>
+
+```
+NODE_ENV=test npx sequelize-cli db:migrate && npm run test-integration
+```
