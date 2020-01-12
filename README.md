@@ -10,10 +10,10 @@ MySql >=5.6
 You can input your custom DB connection settings by creating a new `.env` file using the `.env-example` as a template
 
 <h3>Run the migrations, seeds, and server</h3>
+
 ```
 npm i
 npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 npm start
 ```
-
