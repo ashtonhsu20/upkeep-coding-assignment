@@ -29,8 +29,8 @@ router.get("/:userId/friends", function (req, res) {
     `
     SELECT users.*
     FROM users
-    inner JOIN friends on user_id_2 = users.id
-    where friends.user_id_1 = :userId`,
+    inner JOIN friends_view on user_id_2 = users.id
+    where friends_view.user_id_1 = :userId`,
     {
       model: models.User,
       replacements: {
@@ -50,7 +50,7 @@ router.get("/:userId/friends_of_friends", function (req, res) {
   models.sequelize.query(
     `
     SELECT DISTINCT users.*
-    FROM friends f1, friends f2
+    FROM friends_view f1, friends_view f2
     inner JOIN users on f2.user_id_2 = users.id
     where f1.user_id_1 = :userId
     and f1.user_id_2 = f2.user_id_1

@@ -14,3 +14,5 @@ npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 npm start
 ```
+
+DROP VIEW `upkeep-project`.friends_view RESTRICT;

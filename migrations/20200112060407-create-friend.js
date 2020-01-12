@@ -26,9 +26,9 @@ module.exports = {
       .then(() => {
         return queryInterface.sequelize.query('ALTER TABLE friends ADD PRIMARY KEY (user_id_1, user_id_2)');
       })
-      // .then(() => {
-      //   return queryInterface.sequelize.query('CONSTRAINT CheckOneWay CHECK (user_id_1, user_id_2)');
-      // })
+      .then(() => {
+        return queryInterface.sequelize.query('ALTER TABLE friends ADD CONSTRAINT CheckOneWay CHECK (user_id_1 < user_id_2)');
+      })
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('friends');
