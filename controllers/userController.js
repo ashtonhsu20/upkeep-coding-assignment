@@ -1,6 +1,5 @@
 var userService = require('../services/userService.js');
 
-// exports.UserService = UserService;
 module.exports = {
   getUsers: function (req, res) {
     let options = {};
