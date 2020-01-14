@@ -1,8 +1,7 @@
 var models = require('../models');
 
-// exports.UserService = UserService;
 module.exports = {
-  findAll: function (options) {
+  getUsers: function (options) {
     return models.User.findAll(options);
   },
   getFriends: function (userId) {
